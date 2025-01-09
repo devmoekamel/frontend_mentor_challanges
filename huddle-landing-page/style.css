@@ -85,7 +85,7 @@ footer span:hover{
     border: 0;
 }
 
-@media(max-width:835px){
+@media(max-width:1114px){
     body{
         background-image: url(/huddle-landing-page/images/bg-mobile.svg);
         background-repeat: no-repeat;
