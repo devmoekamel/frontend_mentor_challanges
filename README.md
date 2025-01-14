@@ -1,4 +1,4 @@
-# All Frontend mentor solution 
+# All Frontend mentor solutions 
   # like Leaves under this folder :
   ``
   frontend_mentor_challanges
