@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+
+    --Red: hsl(0, 100%, 68%);
+    --Very-Dark-Blue: hsl(230, 29%, 20%);
+    --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+    --Grayish-Blue: hsl(231, 7%, 65%);
+    --Light-Grayish-Blue: hsl(207, 33%, 95%);
+}
+
+
+/*  font-family: "Barlow Condensed", serif; */
+
+.back-ground{
+    background-color: var(--Light-Grayish-Blue);
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    height: 50vh;
+    border-radius: 0 0  2rem 2rem ;
+
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+}
+nav .nav-links{
+    display: flex;
+    gap:4rem;
+ 
+}
+.nav-links a{
+    color: var(--Very-Dark-Blue);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all ease-in-out 1s;
+}
+.nav-links a:hover{
+
+    color:var(--Light-Grayish-Blue)
+}
+.hamburger-icon{
+    display: none;
+    cursor: pointer;
+}
+
+section{
+    margin: 1rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));    
+    padding: 0rem 4rem;
+    overflow: hidden;
+    align-items: center;
+}
+
+section .content-section{
+display: flex;
+flex-direction: column;
+row-gap: 1rem;
+}
+
+section .content-section .first-line{
+display: flex;
+align-items: center;
+gap: 1rem;
+}
+
+section .content-section .first-line span
+{
+    padding: 0.5rem 1rem;
+    background-color: var(--Very-Dark-Blue);
+    color: white;
+    border-radius: 1rem;
+}
+
+section .content-section h1{
+font-size: 2rem;
+text-transform: uppercase;
+font-weight: bolder;
+margin: 0;
+}
+section .content-section p{
+color:var(--Grayish-Blue);
+margin: 0;
+}
+
+.btn-section{
+    display:flex;
+    column-gap: 2rem;
+    /* padding: 1rem; */
+    
+}
+
+.btn-section h4{
+    color: var(--Grayish-Blue);
+    text-transform: capitalize;
+}
+.btn-section button{
+    padding: 1rem 2rem;
+    background-color: var(--Red);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all ease-in-out 1s;
+}
+
+@media (max-width:440px) {
+
+    nav{
+        padding: 1rem 2rem;
+    }
+    nav .nav-links{
+         position: absolute;
+         display: flex;
+         flex-direction: column;
+         background-color: white;
+         top: 4.5rem;
+         left: 0;
+         width: 100vw;
+         padding: 1.4rem;
+         border-radius: 2rem;
+    }
+    .hamburger-icon{
+        display: block;
+    }
+    .notactive{
+        display: none!important;
+    }
+  
+    section{
+        padding: 1rem 0rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        row-gap: 2rem;
+        flex-direction: column-reverse;
+    
+    }
+    section .image-section {
+        order: -1; 
+    }
+    
+    section .content-section {
+        order: 2;
+    }
+    section .content-section{
+        padding: 0rem 1rem;
+    }
+  
+  
+}
